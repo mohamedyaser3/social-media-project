@@ -6,7 +6,11 @@ import {
 } from "@heroui/react";
 import React from "react";
 
-export default function CardDropdawen({ onOpen, setIsUpdateMood }) {
+export default function CardDropdawen({ onOpen, setIsUpdateMood, setIsUpdate }) {
+  function handleEdit() {
+  setIsUpdateMood(true);
+  setIsUpdate(true);
+}
   return (
     <>
       <Dropdown>
@@ -17,9 +21,7 @@ export default function CardDropdawen({ onOpen, setIsUpdateMood }) {
         </DropdownTrigger>
         <DropdownMenu aria-label="Static Actions">
           <DropdownItem
-            onPress={() => {
-              setIsUpdateMood(true);
-            }}
+            onPress={handleEdit}
             key="new"
           >
             Edite

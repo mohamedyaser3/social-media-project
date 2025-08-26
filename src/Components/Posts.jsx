@@ -49,7 +49,7 @@ export default function Posts({
       {isUpdate ?<div> <CreatePost isUpdate={isUpdate} setIsUpdate={setIsUpdate} post={post} callbace={callbace}/></div> :
       <div className=" rounded-lg shadow p-2 border border-gray-500 mt-4">
         <div className="flex justify-end">
-          {post.user._id == userData?._id && <CardDropdawen onClose={onclose} setIsUpdate={setIsUpdate}  onOpen={onOpen} />}
+          {post.user._id == userData?._id && <CardDropdawen setIsUpdateMood={()=>{}} setIsUpdate={setIsUpdate}  onOpen={onOpen} />}
         </div>
         <CardHeader cardHeader={post} />
         <PostBody postBody={post} />
