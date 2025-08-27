@@ -9,7 +9,7 @@ export async function getAllPostsApi() {
         token: localStorage.getItem("token"),
       },
       params:{
-        page: 43
+        page: 20
 
       }
     });
